@@ -47,6 +47,13 @@ body {
   height: calc(100vh - 60px);
 }
 
+.background_h1{
+  background-image: url('../public/background_h1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

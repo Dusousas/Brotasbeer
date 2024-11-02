@@ -10,7 +10,7 @@ export default function SocialMedia() {
 
     return (
         <>
-            <section className="relative z-10">
+            <section className="relative z-10 ">
                 {/* Botão de Menu Hamburguer para lg e superiores */}
                 <div className="hidden lg:block">
                     <button
@@ -42,9 +42,9 @@ export default function SocialMedia() {
 
                             {/* Ícones de Redes Sociais */}
                             <div className="flex space-x-4 text-2xl">
-                                <a href="#" aria-label="Facebook" className="hover:text-gray-400">Fb</a>
-                                <a href="#" aria-label="Twitter" className="hover:text-gray-400">Tw</a>
-                                <a href="#" aria-label="LinkedIn" className="hover:text-gray-400">Ln</a>
+                                <a href="#" aria-label="Facebook" className="hover:text-gray-400"><img src="instagram.png" alt="" /></a>
+                                <a href="#" aria-label="Twitter" className="hover:text-gray-400"><img src="facebook.png" alt="" /></a>
+                                <a href="#" aria-label="LinkedIn" className="hover:text-gray-400"><img src="whatsapp.png" alt="" /></a>
                             </div>
                         </div>
 

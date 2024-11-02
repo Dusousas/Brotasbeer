@@ -2,6 +2,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
+import About from "@/components/About";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <Navbar />
       <Main />
+      <About />
     </>
   );
 }
