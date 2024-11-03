@@ -26,20 +26,20 @@ body {
   }
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.maxWidth{
+.maxWidth {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2%;
 }
 
 /* BACKGROUNDS */
-.bgMain{
+.bgMain {
   background-image: url('../public/mainbg.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,14 +47,14 @@ body {
   height: calc(100vh - 0px);
 }
 
-.background_h1{
+.background_h1 {
   background-image: url('../public/background_h1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.background_h2{
+.background_h2 {
   background-image: url('../public/fabrica.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,7 +62,15 @@ body {
   background-attachment: fixed;
 }
 
-.background_pub{
+.background_beers {
+  background-image: url('../public/background_beers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.background_pub {
   background-image: url('../public/background_pub.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,13 +78,20 @@ body {
   background-attachment: fixed;
 }
 
-.background_beers{
-  background-image: url('../public/backgroun_beers.jpg');
+.background_pub_2 {
+  background-image: url('../public/bg_history.png');
+  background-position: center;
+}
+
+.background_awards {
+  background-image: url('../public/background_awards.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
+
+
 
 body {
   color: var(--foreground);

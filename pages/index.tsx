@@ -8,6 +8,8 @@ import Mosaic from "@/components/Mosaic";
 import Beers from "@/components/Beers";
 import Pub from "@/components/Pub";
 import Testimonials from "@/components/Testimonials";
+import Delivery from "@/components/Delivery";
+import Awards from "@/components/Awards";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,13 +33,8 @@ export default function Home() {
       <Beers />
       <Testimonials />
       <Pub />
+      <Delivery />
+      <Awards />
     </>
   );
 }
-
-
-// 1 Cardapio
-// 2 Fabrica
-// 3 Premios
-// 4 Chopp Delivery
-// 5 Beers
