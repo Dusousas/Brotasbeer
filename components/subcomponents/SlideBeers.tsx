@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -6,36 +6,40 @@ import { Navigation } from 'swiper/modules';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+// Importa o tipo de Swiper para definir o tipo da referência
+import { Swiper as SwiperType, NavigationOptions } from 'swiper/types';
+
 export default function SlideBeers() {
-    // Referências para os botões de navegação
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
+    // Define o tipo de swiperRef como SwiperType
+    const swiperRef = useRef<SwiperType | null>(null);
+    const prevRef = useRef<HTMLDivElement>(null);
+    const nextRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (swiperRef.current && swiperRef.current.params.navigation) {
+            const navigation = swiperRef.current.params.navigation as NavigationOptions;
+            navigation.prevEl = prevRef.current;
+            navigation.nextEl = nextRef.current;
+            swiperRef.current.navigation.init();
+            swiperRef.current.navigation.update();
+        }
+    }, []);
 
     return (
         <div>
             <section id='beers' className='flex items-center gap-2'>
                 {/* Botão de navegação esquerda */}
-                <div
-                    ref={prevRef}
-                    className='text-center my-4 cursor-pointer'
-                >
+                <div ref={prevRef} className='text-center my-4 cursor-pointer'>
                     <FontAwesomeIcon icon={faArrowLeft} size="2x" className="text-black" />
                 </div>
                 
                 <Swiper
+                    onInit={(swiper) => {
+                        swiperRef.current = swiper; // Atribui o swiper à referência após a inicialização
+                    }}
                     spaceBetween={30}
                     slidesPerView={1}
-                    navigation={{
-                        prevEl: prevRef.current,
-                        nextEl: nextRef.current,
-                    }}
-                    onInit={(swiper) => {
-                        // Atribui as referências após a inicialização do Swiper
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                    }}
+                    navigation={{ enabled: false }} // Define a navegação como um objeto
                     modules={[Navigation]}
                     breakpoints={{
                         1024: { // A partir do breakpoint lg
@@ -55,7 +59,7 @@ export default function SlideBeers() {
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
                                 <p className='max-w-[350px] text-textGray mt-4'>
-                                Cerveja Pilsen de baixa fermentação (Lager), de corpo dourado e brilhante. É o estilo de cerveja mais consumido em todo o mundo. Em seu paladar estão presentes leves notas de cereais, provenientes do malte Pilsen, que lembram biscoito cream cracker.
+                                    Cerveja Pilsen de baixa fermentação (Lager), de corpo dourado e brilhante. É o estilo de cerveja mais consumido em todo o mundo. Em seu paladar estão presentes leves notas de cereais, provenientes do malte Pilsen, que lembram biscoito cream cracker.
                                 </p>
                             </div>
                         </article>
@@ -73,7 +77,7 @@ export default function SlideBeers() {
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
                                 <p className='max-w-[350px] text-textGray mt-4'>
-                                Cerveja de trigo tipo Weissbier de alta fermentação (Ale), clara, condimentada, frutada e extremamente refrescante. Esta cerveja é uma especialidade do verão no sul da Alemanha. É porta de entrada no mundo das cervejas especiais.
+                                    Cerveja de trigo tipo Weissbier de alta fermentação (Ale), clara, condimentada, frutada e extremamente refrescante. Esta cerveja é uma especialidade do verão no sul da Alemanha. É porta de entrada no mundo das cervejas especiais.
                                 </p>
                             </div>
                         </article>
@@ -91,7 +95,7 @@ export default function SlideBeers() {
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
                                 <p className='max-w-[350px] text-textGray mt-4'>
-                                Cerveja forte escura tipo Red Ale de alta fermentação, de origem irlandesa, com um profundo e cristalino tom avermelhado, de corpo médio e colarinho baixo. Com uma presença moderada de malte em seu aroma e sabor, ela se destaca pelo suave sabor dos lúpulos ingleses.
+                                    Cerveja forte escura tipo Red Ale de alta fermentação, de origem irlandesa, com um profundo e cristalino tom avermelhado, de corpo médio e colarinho baixo. Com uma presença moderada de malte em seu aroma e sabor, ela se destaca pelo suave sabor dos lúpulos ingleses.
                                 </p>
                             </div>
                         </article>
@@ -99,13 +103,9 @@ export default function SlideBeers() {
                 </Swiper>
 
                 {/* Botão de navegação direita */}
-                <div
-                    ref={nextRef}
-                    className='text-center my-4 cursor-pointer'
-                >
+                <div ref={nextRef} className='text-center my-4 cursor-pointer'>
                     <FontAwesomeIcon icon={faArrowRight} size="2x" className="text-black" />
                 </div>
-
             </section>
         </div>
     );
