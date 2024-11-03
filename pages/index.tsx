@@ -10,6 +10,8 @@ import Pub from "@/components/Pub";
 import Testimonials from "@/components/Testimonials";
 import Delivery from "@/components/Delivery";
 import Awards from "@/components/Awards";
+import Maps from "@/components/Maps";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +37,8 @@ export default function Home() {
       <Pub />
       <Delivery />
       <Awards />
+      <Maps />
+      <Footer />
     </>
   );
 }
