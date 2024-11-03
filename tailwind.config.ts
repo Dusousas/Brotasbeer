@@ -11,7 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        textGreen: "#017d53"
+        textGreen: "#017d53",
+        textGray: "#777777"
+
       },
       fontFamily: {
         teko: ["Teko", "sans-serif"],

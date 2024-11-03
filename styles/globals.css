@@ -44,7 +44,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 0px);
 }
 
 .background_h1{
@@ -52,6 +52,30 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.background_h2{
+  background-image: url('../public/fabrica.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.background_pub{
+  background-image: url('../public/background_pub.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.background_beers{
+  background-image: url('../public/backgroun_beers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {

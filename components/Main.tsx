@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Main() {
     return (
         <>
-            <section className='bgMain overflow-hidden'>
+            <section id="home" className='bgMain overflow-hidden'>
                 <div className='flex flex-col h-full w-full items-center justify-center lg:flex-row'>
 
                     {/* SLIDER LEFT DESKTOP */}

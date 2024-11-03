@@ -3,6 +3,11 @@ import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
 import About from "@/components/About";
+import Brewery from "@/components/Brewery";
+import Mosaic from "@/components/Mosaic";
+import Beers from "@/components/Beers";
+import Pub from "@/components/Pub";
+import Testimonials from "@/components/Testimonials";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,6 +26,18 @@ export default function Home() {
       <Navbar />
       <Main />
       <About />
+      <Brewery />
+      <Mosaic />
+      <Beers />
+      <Testimonials />
+      <Pub />
     </>
   );
 }
+
+
+// 1 Cardapio
+// 2 Fabrica
+// 3 Premios
+// 4 Chopp Delivery
+// 5 Beers
