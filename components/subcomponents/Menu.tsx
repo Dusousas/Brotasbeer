@@ -56,7 +56,7 @@ export default function Menu() {
 
     return (
         <>
-    
+
             {/* Ícone de Hambúrguer no Mobile */}
             <div className="lg:hidden flex items-center mt-2">
                 <button onClick={toggleMenu} className="text-3xl" aria-label="Toggle menu">
@@ -103,6 +103,12 @@ export default function Menu() {
                     >
                         Prêmios
                     </li>
+                    <li
+                        onClick={() => handleNavigation("contact")}
+                        className={`cursor-pointer ${activeSection === "contact" ? "border-b-2 border-textGreen" : ""}`}
+                    >
+                        Contato
+                    </li>
                 </ul>
 
                 {/* Menu Mobile */}
@@ -114,6 +120,8 @@ export default function Menu() {
                         <li onClick={() => handleNavigation("pub")}>Pub</li>
                         <li onClick={() => handleNavigation("delivery")}>Chopp Delivery</li>
                         <li onClick={() => handleNavigation("awards")}>Prêmios</li>
+                        <li onClick={() => handleNavigation("contact")}>contato</li>
+
                     </ul>
                 )}
             </nav>

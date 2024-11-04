@@ -3,7 +3,7 @@ import React from 'react';
 export default function Form() {
     return (
         <>
-            <form className='w-full '>
+            <form id='contact' className='w-full '>
                 <div className='flex gap-6'>
                     <div className='w-1/2'>
                         <input className='w-full h-[57px] outline-none bg-transparent border-[2px] border-textGray px-3 uppercase' placeholder='Seu nome' type="text" />

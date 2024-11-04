@@ -13,6 +13,7 @@ import Awards from "@/components/Awards";
 import Maps from "@/components/Maps";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import Cervejaria from "./Cervejaria";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,6 +42,8 @@ export default function Home() {
       <Contact />
       <Maps />
       <Footer />
+
+      <Cervejaria />
     </>
   );
 }
