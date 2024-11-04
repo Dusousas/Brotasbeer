@@ -1,8 +1,15 @@
 import { faAward } from '@fortawesome/free-solid-svg-icons/faAward';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useRouter } from 'next/router';
+
 
 export default function Awards() {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push('/Premios');
+    };
     return (
         <div>
             <section id='awards' className='py-20 background_awards'>
@@ -45,7 +52,7 @@ export default function Awards() {
                     </article>
 
                     <div className="mx-auto text-center mt-10 flex items-center justify-center gap-4">
-                        <button className="font-teko uppercase bg-black text-white pt-4 pb-[13px] px-8">Mais conquistas
+                        <button onClick={handleClick} className="font-teko uppercase bg-black text-white pt-4 pb-[13px] px-8">Mais conquistas
                             <FontAwesomeIcon className='ml-3' icon={faAward} />
                         </button>
 

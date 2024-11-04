@@ -32,7 +32,7 @@ export default function SlideBeers() {
                 <div ref={prevRef} className='text-center my-4 cursor-pointer'>
                     <FontAwesomeIcon icon={faArrowLeft} size="2x" className="text-black" />
                 </div>
-                
+
                 <Swiper
                     onInit={(swiper) => {
                         swiperRef.current = swiper; // Atribui o swiper à referência após a inicialização
@@ -54,13 +54,13 @@ export default function SlideBeers() {
                                 <img className='w-full' src="beers_h1.png" alt="Pilsen" />
                             </div>
                             <div>
-                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>Pilsen</h1>
+                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>Pilsen <span className='text-xl font-light ml-4'>4.7% alcool</span></h1>
                                 <div className='mt-2'>
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
-                                <p className='max-w-[350px] text-textGray mt-4'>
-                                    Cerveja Pilsen de baixa fermentação (Lager), de corpo dourado e brilhante. É o estilo de cerveja mais consumido em todo o mundo. Em seu paladar estão presentes leves notas de cereais, provenientes do malte Pilsen, que lembram biscoito cream cracker.
-                                </p>
+                                <p className='max-w-[350px] text-textGray mt-4'>Cerveja Pilsen de baixa fermentação (Lager), de corpo dourado e brilhante. É o estilo de cerveja mais consumido em todo o mundo. Em seu paladar estão presentes leves notas de cereais, provenientes do malte Pilsen, que lembram biscoito cream cracker.</p>
+                                <h2 className='text-xl text-black font-teko mt-2'>15 IBUs amargor</h2>
+
                             </div>
                         </article>
                     </SwiperSlide>
@@ -72,13 +72,15 @@ export default function SlideBeers() {
                                 <img className='w-full' src="beers_h1.png" alt="Weissbier" />
                             </div>
                             <div>
-                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>WEISSBIER</h1>
+                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>WEISSBIER<span className='text-xl font-light ml-4'>4.3% alcool</span></h1>
                                 <div className='mt-2'>
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
                                 <p className='max-w-[350px] text-textGray mt-4'>
                                     Cerveja de trigo tipo Weissbier de alta fermentação (Ale), clara, condimentada, frutada e extremamente refrescante. Esta cerveja é uma especialidade do verão no sul da Alemanha. É porta de entrada no mundo das cervejas especiais.
                                 </p>
+                                <h2 className='text-xl text-black font-teko mt-2'>13 IBUs amargor</h2>
+
                             </div>
                         </article>
                     </SwiperSlide>
@@ -90,13 +92,15 @@ export default function SlideBeers() {
                                 <img className='w-full' src="beers_h1.png" alt="Red Ale" />
                             </div>
                             <div>
-                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>RED ALE</h1>
+                                <h1 className='text-black font-teko font-semibold uppercase text-2xl'>RED ALE<span className='text-xl font-light ml-4'>5.0% alcool</span></h1>
                                 <div className='mt-2'>
                                     <img src="slidegreen.png" alt="Decorative line" />
                                 </div>
                                 <p className='max-w-[350px] text-textGray mt-4'>
                                     Cerveja forte escura tipo Red Ale de alta fermentação, de origem irlandesa, com um profundo e cristalino tom avermelhado, de corpo médio e colarinho baixo. Com uma presença moderada de malte em seu aroma e sabor, ela se destaca pelo suave sabor dos lúpulos ingleses.
                                 </p>
+                                <h2 className='text-xl text-black font-teko mt-2'>25 IBUs amargor</h2>
+
                             </div>
                         </article>
                     </SwiperSlide>

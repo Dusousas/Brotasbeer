@@ -1,8 +1,14 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useRouter } from 'next/router';
+
 import CardsAbout from "./subcomponents/CardsAbout";
 
 export default function About() {
+  const router = useRouter();
+
+  const handleClick = () => {
+      router.push('/BrotasBeer');
+  };
   return (
     <div>
       <section id="about" className="background_h1 py-20">
@@ -24,7 +30,7 @@ export default function About() {
             </div>
 
             <div className="mx-auto text-center mt-6 lg:text-left">
-              <button className="font-teko uppercase bg-black text-white pt-4 pb-[13px] px-8">Saiba mais</button>
+              <button onClick={handleClick} className="font-teko uppercase bg-black text-white pt-4 pb-[13px] px-8">Saiba mais</button>
             </div>
           </article>
 

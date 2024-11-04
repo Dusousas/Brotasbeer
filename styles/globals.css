@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 body {
@@ -85,6 +78,20 @@ body {
   background-attachment: fixed;
 }
 
+.bannerPub {
+  background-image: url('../public/banner_Pub.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+.bannerPremio {
+  background-image: url('../public/background_premio.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
 /*GRADIENTS */
 .gold-gradient {
   background: linear-gradient(180deg, #d4af37, #f8e29d, #d4af37);
@@ -92,11 +99,4 @@ body {
 
 .silver-gradient {
   background: linear-gradient(180deg, #c0c0c0, #e0e0e0, #c0c0c0);
-}
-
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

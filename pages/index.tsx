@@ -14,6 +14,7 @@ import Maps from "@/components/Maps";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Cervejaria from "./Cervejaria";
+import BrotasBeer from "./BrotasBeer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,8 +43,6 @@ export default function Home() {
       <Contact />
       <Maps />
       <Footer />
-
-      <Cervejaria />
     </>
   );
 }

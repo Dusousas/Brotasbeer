@@ -22,16 +22,16 @@ export default function Timeline() {
             <img src="slidegreen.png" alt="" />
 
             {/* Timeline */}
-            <div className="flex flex-col items-center justify-center w-full py-20 space-x-10 lg:flex-row ">
+            <div className="flex flex-col items-center justify-center w-full py-20  lg:flex-row">
                 {events.map((event, index) => (
                     <div
                         key={index}
                         onClick={() => setActiveIndex(index)}
-                        className={`cursor-pointer flex flex-col items-center transition-all duration-300 ${activeIndex >= index ? 'text-textGreen' : 'text-textGray'
+                        className={`cursor-pointer flex flex-col items-center w-full ml-0 transition-all duration-300 ${activeIndex >= index ? 'text-textGreen' : 'text-textGray'
                             }`}
                     >
                         <div
-                            className={`w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors duration-300 ${activeIndex >= index ? 'bg-textGreen border-textGreen text-white' : 'border-gray-300'
+                            className={`w-8 h-8 rounded-full flex items-center justify-center border-2  transition-colors duration-300 ${activeIndex >= index ? 'bg-textGreen border-textGreen text-white' : 'border-gray-300'
                                 }`}
                         />
                         <p className="mt-2 font-semibold">{event.date}</p>
@@ -43,7 +43,6 @@ export default function Timeline() {
             <div className="w-full h-1 bg-gray-300 my-5 relative">
                 <div className="absolute h-1 bg-textGreen transition-all duration-300" style={{ width: `${(activeIndex / (events.length - 1)) * 100}%` }}></div>
             </div>
-
             {/* Conteúdo do Evento */}
             <div className="text-center max-w-[1400px] h-[200px] flex flex-col justify-center">
                 <h2 className="text-2xl font-bold text-textGreen">{events[activeIndex].title}</h2>
