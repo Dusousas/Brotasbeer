@@ -12,6 +12,7 @@ import Delivery from "@/components/Delivery";
 import Awards from "@/components/Awards";
 import Maps from "@/components/Maps";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default function Home() {
       <Pub />
       <Delivery />
       <Awards />
+      <Contact />
       <Maps />
       <Footer />
     </>
