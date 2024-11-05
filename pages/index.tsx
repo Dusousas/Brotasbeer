@@ -1,4 +1,3 @@
-import Image from "next/image";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
@@ -13,8 +12,7 @@ import Awards from "@/components/Awards";
 import Maps from "@/components/Maps";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import Cervejaria from "./Cervejaria";
-import BrotasBeer from "./BrotasBeer";
+import Whatsapp from "@/components/subcomponents/Whatsapp";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +41,7 @@ export default function Home() {
       <Contact />
       <Maps />
       <Footer />
+      <Whatsapp />
     </>
   );
 }
