@@ -40,7 +40,6 @@ export default function SlideBeers() {
                     spaceBetween={30}
                     slidesPerView={1}
                     navigation={{ enabled: false }} // Define a navegação como um objeto
-                    modules={[Navigation]}
                     breakpoints={{
                         1024: { // A partir do breakpoint lg
                             slidesPerView: 2,

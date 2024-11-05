@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from 'next/router';
-
 import CardsAbout from "./subcomponents/CardsAbout";
 
 export default function About() {
