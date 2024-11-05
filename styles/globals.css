@@ -100,3 +100,11 @@ body {
 .silver-gradient {
   background: linear-gradient(180deg, #c0c0c0, #e0e0e0, #c0c0c0);
 }
+
+summary {
+  list-style: none; /* Remove a seta */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Remove a seta em navegadores baseados em WebKit, como Chrome e Safari */
+}

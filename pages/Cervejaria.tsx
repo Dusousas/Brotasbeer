@@ -11,7 +11,7 @@ export default function cervejaria() {
       <Navbar />
       <section id='about' className='bannerPub py-32 relative top-[59px]'>
         <div className='maxWidth '>
-          <h1 className="font-teko text-7xl mt-4 uppercase text-center lg:tracking-wider lg:text-8xl text-white">Brotas Bar - Fábrica</h1>
+          <h1 className="font-teko text-7xl mt-4 uppercase text-center lg:tracking-wider lg:text-8xl text-white">Brotas Beer - Fábrica</h1>
         </div>
       </section>
 
